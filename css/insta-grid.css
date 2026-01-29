@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.insta-grid-wrap-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-grid {
+    width: 100%;
+    padding: 0 100px;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 20px 0;
+}
+
+.insta-grid-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.instagrid-span-text {
+    font-size: 72px;
+    font-family: 'CherieDEMO';
+}
+
+.insta-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 24px;
+    row-gap: 24px;
+}
+
+.insta-grid-card img {
+    width: 100%;
+    height: auto;
+}
+
+.insta-grid-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.insta-grid-card:hover .overlay {
+    opacity: 1;
+}
+
+.instgrid-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    text-align: left;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.insta-grid-card:hover .instgrid-text-wrapper {
+    opacity: 1;
+}
+
+.insta-grid-card-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 64px;
+    height: 64px;
+}
+
+.insta-grid-card:hover .insta-grid-card-icon {
+    opacity: 1;
+}
+
+.insta-grid-card-icon img {
+    width: 100%;
+    height: auto;
+}
+
+
+.insta-grid-card-heading {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    align-self: stretch;
+}
+
+.insta-grid-card-desc {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    align-self: stretch;
+}
+
+/* --------------------------------- Media Queries -------------------------------- */
+
+/* Mobile V1 */
+@media (360px <=width <=430px) {
+    .instagram-grid {
+        padding: 0 10px;
+    }
+
+    .insta-grid-container {
+        column-gap: 8px;
+        row-gap: 8px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .instagrid-span-text {
+        font-size: 36px;
+    }
+
+    .insta-grid-heading {
+        font-size: 24px;
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        width: 32px;
+        height: 32px;
+        top: auto;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        padding: 10px;
+    }
+
+    .overlay {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .overlay {
+        opacity: 1;
+    }
+
+    .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .insta-grid-card-icon {
+        opacity: 1;
+    }
+}
+
+/* Tablet V1 */
+@media (600px <=width <=899px) {
+    .instagram-grid {
+        padding: 0px 40px;
+    }
+
+    .instagrid-span-text {
+        font-size: 48px;
+    }
+
+    .insta-grid-heading {
+        font-size: 32px;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        width: 40px;
+        height: 40px;
+        top: auto;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        padding: 16px;
+    }
+
+    .insta-grid-container {
+        column-gap: 14px;
+        row-gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .overlay {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .overlay {
+        opacity: 1;
+    }
+
+    .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .insta-grid-card-icon {
+        opacity: 1;
+    }
+}
+
+/* Tablet V2 */
+@media (900px <=width <=1023px) {
+    .instagrid-span-text {
+        font-size: 56px;
+    }
+
+    .insta-grid-heading {
+        font-size: 40px;
+    }
+
+    .instagram-grid {
+        padding: 0px 40px;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        width: 48px;
+        height: 48px;
+        top: auto;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        padding: 24px;
+    }
+
+    .insta-grid-container {
+        column-gap: 14px;
+        row-gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .overlay {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .overlay {
+        opacity: 1;
+    }
+
+    .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card:hover .instgrid-text-wrapper {
+        opacity: 0;
+    }
+
+    .insta-grid-card-icon {
+        opacity: 1;
+    }
+
+    .insta-grid-card:hover .insta-grid-card-icon {
+        opacity: 1;
+    }
+}
+
+/* Desktop V1 */
+@media (1024px <=width <=1199px) {
+    .instagram-grid {
+        padding: 0 50px;
+        gap: 32px;
+    }
+    .insta-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .insta-grid-heading {
+        font-size: 32px;
+    }
+
+    .instagrid-span-text {
+        font-size: 48px;
+    }
+
+    .insta-grid-card-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .insta-grid-card-heading {
+        font-size: 24px;
+    }
+
+    .insta-grid-card-desc {
+        font-size: 14px;
+    }
+}
+
+/* Desktop V2 */
+@media (1200px <=width <=1439px) {
+    .instagram-grid {
+        gap: 40px;
+        padding: 3.31rem 3rem;
+    }
+
+.insta-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    .insta-grid-heading {
+        font-size: 34px;
+    }
+
+    .instagrid-span-text {
+        font-size: 58px;
+    }
+
+    .insta-grid-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .insta-grid-card-heading {
+        font-size: 24px;
+    }
+}
+
+/* Desktop V3 */
+@media (1440px <=width <=1599px) {
+    .instagram-grid {
+        gap: 56px;
+        padding: 3.31rem 3rem;
+    }
+
+    .insta-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        column-gap: 8px;
+    }
+
+    .insta-grid-card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .insta-grid-card-heading {
+        font-size: 26px;
+    }
+
+    .insta-grid-card-desc {
+        font-size: 16px;
+    }
+
+    .instgrid-text-wrapper {
+        padding: 24px;
+    }
+
+    .insta-grid-card-icon {
+        top: 24px;
+        right: 24px;
+    }
+}
+
+/* Desktop V4 */
+@media (1600px <=width <=1919px) {
+    .instagram-grid {
+        padding: 3.31rem 3rem;
+    }
+    .insta-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .insta-grid-card-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .instgrid-text-wrapper {
+        padding: 24px;
+    }
+
+    .insta-grid-card-icon {
+        top: 24px;
+        right: 24px;
+    }
+}
+
+/* Desktop V5 */
+@media (1920px <=width) {
+    .instagram-grid {
+        padding: 6.25rem 6rem;
+    }
+    .insta-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .insta-grid-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-size: 48px;
+    }
+
+    .instagrid-span-text {
+        font-size: 80px;
+    }
+
+    .insta-grid-card-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .instgrid-text-wrapper {
+        padding: 32px;
+    }
+
+    .insta-grid-card-icon {
+        top: 32px;
+        right: 32px;
+    }
+}

@@ -1,0 +1,10 @@
+# Force all traffic to use HTTPS
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^wunderkint\.com [NC]
+RewriteRule ^(.*)$ https://www.wunderkint.com/$1 [R=301,L]
+
+RewriteEngine On
+RewriteRule ^about-us$ pages/about-us.html [L]
+RewriteRule ^branding-solutions$ pages/branding-solutions.html [L]
+RewriteRule ^web-solutions$ pages/web-solutions.html [L]
+RewriteRule ^media-solutions$ pages/media-solutions.html [L]
