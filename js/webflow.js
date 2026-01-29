@@ -43052,7 +43052,7 @@ Webflow.require("ix2").init({
                       selector: ".superman-div",
                       selectorGuids: ["fec6228c-3ffd-c393-2e5c-723b6bf800b1"],
                     },
-                    xValue: 200,
+                    xValue: 100,
                     xUnit: "%",
                     yUnit: "PX",
                     zUnit: "PX",
