@@ -1,0 +1,48 @@
+# HTTPS Redirects
+[[redirects]]
+  from = "http://wunderkint.com/*"
+  to = "https://www.wunderkint.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://wunderkint.com/*"
+  to = "https://www.wunderkint.com/:splat"
+  status = 301
+  force = true
+
+# Page Redirects
+[[redirects]]
+  from = "/about-us"
+  to = "/pages/about-us.html"
+  status = 200
+
+[[redirects]]
+  from = "/branding-solutions"
+  to = "/pages/branding-solutions.html"
+  status = 200
+
+[[redirects]]
+  from = "/web-solutions"
+  to = "/pages/web-solutions.html"
+  status = 200
+
+[[redirects]]
+  from = "/media-solutions"
+  to = "/pages/media-solutions.html"
+  status = 200
+
+# Pretty URLs (remove .html extension)
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 200
+  force = false
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
